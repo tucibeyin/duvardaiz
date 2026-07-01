@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Duvardaki İz - Kurumsal Sanat</title>
 
-    <!-- Tailwind CSS (Arayüz Tasarımı İçin) -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -27,7 +26,6 @@
         };
     </script>
 
-    <!-- React Bağımlılıklarının Çakışmasını Önleyen Import Map -->
     <script type="importmap">
     {
         "imports": {
@@ -38,7 +36,6 @@
     }
     </script>
 
-    <!-- React ve Babel (Bileşenlerin Tarayıcıda Çalışması İçin) -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
     <style>
@@ -69,10 +66,8 @@
 <body
     class="bg-[#F8FAFC] dark:bg-slate-950 text-slate-900 dark:text-slate-100 font-sans transition-colors duration-500">
 
-    <!-- Sitenin Yükleneceği Ana Konteyner -->
     <div id="root"></div>
 
-    <!-- Uygulama Kodları (React) -->
     <script type="text/babel" data-type="module">
         import React, { useState, useRef, useEffect } from 'react';
         import { createRoot } from 'react-dom/client';
@@ -188,13 +183,14 @@
             const [isDragging, setIsDragging] = useState(false);
             const [activeIndex, setActiveIndex] = useState(0);
 
-            // Farklı dönüşüm projelerini içeren veri dizisi
+            // Kendi görselleriniz images/ klasöründen çekiliyor
             const transformations = [
-                { id: 1, title: "Merkez Trafo", src: "https://images.unsplash.com/photo-1541701494587-cb58502866ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" },
-                { id: 2, title: "Okul Duvarı", src: "https://images.unsplash.com/photo-1499781350541-7783f6c6a0c8?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" },
-                { id: 3, title: "Sağır Cephe", src: "https://images.unsplash.com/photo-1561055657-b9e0bf0fa360?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" },
-                { id: 4, title: "Sokak Merdiveni", src: "https://images.unsplash.com/photo-1517722014278-c256a91a6fba?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" },
-                { id: 5, title: "Park Alanı", src: "https://images.unsplash.com/photo-1581454558552-87db98f26f74?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" }
+                { id: 1, title: "Merkez Trafo", src: "images/grafiti1.jpeg" },
+                { id: 2, title: "Okul Duvarı", src: "images/grafiti2.jpeg" },
+                { id: 3, title: "Sağır Cephe", src: "images/grafiti3.jpeg" },
+                { id: 4, title: "Sokak Merdiveni", src: "images/grafiti4.jpeg" },
+                { id: 5, title: "Park Alanı", src: "images/grafiti5.jpeg" },
+                { id: 6, title: "Alt Geçit", src: "images/grafiti6.jpeg" }
             ];
 
             const handleMove = (event) => {
